@@ -3,23 +3,24 @@
    ======================================== */
 
 :root {
-    /* Colors */
-    --color-primary: #0066cc;
-    --color-primary-dark: #0052a3;
-    --color-primary-light: #e6f0fa;
-    --color-secondary: #1a1a2e;
-    --color-accent: #00b4d8;
+    /* Colors - Trust + Innovation Palette */
+    --color-primary: #0f2862;          /* Deep Navy - trust, expertise */
+    --color-primary-dark: #091a42;     /* Darker navy for hover states */
+    --color-primary-light: #e8eef6;    /* Light navy tint for backgrounds */
+    --color-secondary: #1a4d7c;        /* Medium Blue - sections, headers */
+    --color-accent: #00b4d8;           /* Bright Teal - CTAs, innovation */
+    --color-accent-dark: #0095b3;      /* Darker teal for hover */
 
-    --color-text: #1a1a2e;
-    --color-text-light: #4a5568;
-    --color-text-muted: #718096;
+    --color-text: #1e293b;             /* Charcoal - main text */
+    --color-text-light: #475569;       /* Slate - secondary text */
+    --color-text-muted: #64748b;       /* Light slate - muted text */
 
-    --color-bg: #ffffff;
-    --color-bg-alt: #f8fafc;
-    --color-bg-dark: #1a1a2e;
+    --color-bg: #ffffff;               /* White - main background */
+    --color-bg-alt: #f8fafc;           /* Cool white - alternating sections */
+    --color-bg-dark: #0f2862;          /* Deep navy - dark sections */
 
-    --color-border: #e2e8f0;
-    --color-border-light: #edf2f7;
+    --color-border: #e2e8f0;           /* Light border */
+    --color-border-light: #f1f5f9;     /* Lighter border */
 
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -151,14 +152,14 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: white;
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
     color: white;
 }
 
@@ -251,7 +252,7 @@ ul {
 
 .hero {
     padding: calc(var(--space-4xl) + 80px) 0 var(--space-4xl);
-    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-light) 100%);
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-light) 50%, rgba(0, 180, 216, 0.1) 100%);
 }
 
 .hero-content {
@@ -312,7 +313,7 @@ ul {
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-accent);
     line-height: 1;
 }
 
@@ -461,7 +462,7 @@ ul {
 
 .credentials-list li {
     padding-left: var(--space-lg);
-    border-left: 3px solid var(--color-primary);
+    border-left: 3px solid var(--color-accent);
 }
 
 .credential-degree {
@@ -521,8 +522,13 @@ ul {
     height: 56px;
     background-color: var(--color-primary-light);
     border-radius: var(--radius-md);
-    color: var(--color-primary);
+    color: var(--color-secondary);
     margin-bottom: var(--space-lg);
+}
+
+.expertise-card:hover .expertise-icon {
+    background-color: var(--color-accent);
+    color: white;
 }
 
 .expertise-card h3 {
@@ -580,8 +586,8 @@ ul {
 
 .service-card.featured {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-    border-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(0, 180, 216, 0.05) 100%);
+    border-color: var(--color-accent);
 }
 
 .service-badge {
@@ -593,7 +599,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: white;
     border-radius: var(--radius-full);
 }
@@ -630,7 +636,7 @@ ul {
     top: 0.5em;
     width: 6px;
     height: 6px;
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     border-radius: 50%;
 }
 
@@ -648,12 +654,12 @@ ul {
     margin: 0 auto var(--space-2xl);
     padding: var(--space-xl);
     background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-accent);
     border-radius: var(--radius-lg);
 }
 
 .publication-featured .publication-venue {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
 }
 
 .publication-featured h3 {
@@ -699,7 +705,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: white;
     border-radius: var(--radius-sm);
     margin-bottom: var(--space-sm);
@@ -725,7 +731,7 @@ ul {
 .publication-note {
     font-size: 0.8125rem;
     font-style: italic;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     margin-top: var(--space-sm);
 }
 
@@ -751,8 +757,8 @@ ul {
 }
 
 .publication-links a:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
     color: white;
 }
 
@@ -784,7 +790,7 @@ ul {
     flex-shrink: 0;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     width: 60px;
 }
 
@@ -831,12 +837,12 @@ ul {
     margin: 0 calc(-1 * var(--space-lg));
     padding: var(--space-lg);
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-primary);
-    border-bottom: 1px solid var(--color-primary);
+    border: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
 }
 
 .grant-featured .grant-type {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: white;
 }
 
@@ -958,7 +964,7 @@ ul {
 }
 
 .social-links a:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: white;
 }
 
@@ -997,7 +1003,7 @@ ul {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
 }
 
 .contact-form .btn {
