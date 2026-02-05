@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Jordy Van Landeghem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thanks-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-light) 100%);
+        }
+        .thanks-content {
+            max-width: 500px;
+        }
+        .thanks-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+        .thanks-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+        .thanks-content h1 {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        .thanks-content p {
+            font-size: 1.125rem;
+            color: var(--color-text-light);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="thanks-page">
+        <div class="thanks-content">
+            <div class="thanks-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your message has been received. I'll review your inquiry and get back to you within 1-2 business days.</p>
+            <a href="index.html" class="btn btn-primary btn-large">Back to Homepage</a>
+        </div>
+    </main>
+</body>
+</html>
