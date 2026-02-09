@@ -216,10 +216,13 @@ ul {
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-secondary);
-    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo .logo-img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -1101,9 +1104,12 @@ ul {
 }
 
 .footer-brand .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-secondary);
+    display: inline-block;
+}
+
+.footer-brand .logo .logo-img {
+    height: 36px;
+    width: auto;
 }
 
 .footer-brand p {
