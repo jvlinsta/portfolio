@@ -221,8 +221,9 @@ ul {
 }
 
 .navbar .logo .logo-img {
-    height: 40px;
-    width: auto;
+    height: 40px !important;
+    width: auto !important;
+    max-width: none;
 }
 
 .nav-links {
@@ -1108,8 +1109,9 @@ ul {
 }
 
 .footer-brand .logo .logo-img {
-    height: 36px;
-    width: auto;
+    height: 36px !important;
+    width: auto !important;
+    max-width: none;
 }
 
 .footer-brand p {
