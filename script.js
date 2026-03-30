@@ -179,4 +179,167 @@ function type() {
 type();
 */
 
+/* ========================================
+   ELI5 Toggle System
+   ======================================== */
+
+class ELI5Toggle {
+    constructor() {
+        this.isSimpleMode = localStorage.getItem('eli5-mode') === 'true';
+        this.originalContent = new Map();
+        this.init();
+    }
+
+    init() {
+        // Create and insert toggle button
+        this.createToggleButton();
+
+        // Cache original content
+        this.cacheOriginalContent();
+
+        // Apply saved mode
+        if (this.isSimpleMode) {
+            this.applySimpleMode();
+        }
+
+        // Update button state
+        this.updateButtonState();
+    }
+
+    createToggleButton() {
+        // Find hero image container
+        const heroImage = document.querySelector('.hero-image');
+        if (!heroImage) return;
+
+        // Make hero-image position relative for absolute positioning
+        heroImage.style.position = 'relative';
+
+        // Create toggle container
+        const toggleContainer = document.createElement('div');
+        toggleContainer.className = 'eli5-toggle';
+
+        // Create iOS-style toggle slider with labels
+        toggleContainer.innerHTML = `
+            <div class="toggle-label technical-label" data-mode="technical">
+                <span>🧠</span>
+                <span class="toggle-label-text">Technical</span>
+            </div>
+            <button class="eli5-toggle-btn" role="switch" aria-label="Toggle between technical and simple language" aria-checked="false">
+                <div class="toggle-slider"></div>
+            </button>
+            <div class="toggle-label simple-label" data-mode="simple">
+                <span>💡</span>
+                <span class="toggle-label-text">Simple</span>
+            </div>
+        `;
+
+        // Append to hero-image (will be positioned absolutely)
+        heroImage.appendChild(toggleContainer);
+
+        // Add click listeners - both button and labels
+        const toggleBtn = toggleContainer.querySelector('.eli5-toggle-btn');
+        const labels = toggleContainer.querySelectorAll('.toggle-label');
+
+        toggleBtn.addEventListener('click', () => {
+            this.toggle(!this.isSimpleMode);
+        });
+
+        labels.forEach(label => {
+            label.style.cursor = 'pointer';
+            label.addEventListener('click', () => {
+                const mode = label.dataset.mode;
+                this.toggle(mode === 'simple');
+            });
+        });
+    }
+
+    addToMobileMenu() {
+        // Clone the toggle for mobile menu
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (!mobileMenuBtn) return;
+
+        // We'll add it when mobile menu is opened
+        // For now, just ensure it's in the nav-links which becomes the mobile menu
+    }
+
+    cacheOriginalContent() {
+        const toggleableElements = document.querySelectorAll('[data-toggleable]');
+        toggleableElements.forEach(element => {
+            // Store original HTML content
+            this.originalContent.set(element, element.innerHTML);
+        });
+    }
+
+    toggle(toSimple) {
+        if (this.isSimpleMode === toSimple) return;
+
+        this.isSimpleMode = toSimple;
+        localStorage.setItem('eli5-mode', toSimple.toString());
+
+        if (toSimple) {
+            this.applySimpleMode();
+        } else {
+            this.applyTechnicalMode();
+        }
+
+        this.updateButtonState();
+    }
+
+    applySimpleMode() {
+        const toggleableElements = document.querySelectorAll('[data-toggleable]');
+        toggleableElements.forEach(element => {
+            const simpleText = element.getAttribute('data-eli5');
+            if (simpleText) {
+                this.fadeTransition(element, simpleText);
+            }
+        });
+    }
+
+    applyTechnicalMode() {
+        const toggleableElements = document.querySelectorAll('[data-toggleable]');
+        toggleableElements.forEach(element => {
+            const originalHTML = this.originalContent.get(element);
+            if (originalHTML) {
+                this.fadeTransition(element, originalHTML);
+            }
+        });
+    }
+
+    fadeTransition(element, newContent) {
+        // Add transitioning class
+        element.classList.add('transitioning');
+
+        // Wait for fade out
+        setTimeout(() => {
+            element.innerHTML = newContent;
+            element.classList.remove('transitioning');
+        }, 200);
+    }
+
+    updateButtonState() {
+        const toggleBtn = document.querySelector('.eli5-toggle-btn');
+        const technicalLabel = document.querySelector('.toggle-label.technical-label');
+        const simpleLabel = document.querySelector('.toggle-label.simple-label');
+
+        if (!toggleBtn) return;
+
+        if (this.isSimpleMode) {
+            toggleBtn.classList.add('simple');
+            toggleBtn.setAttribute('aria-checked', 'true');
+            if (technicalLabel) technicalLabel.classList.remove('active');
+            if (simpleLabel) simpleLabel.classList.add('active');
+        } else {
+            toggleBtn.classList.remove('simple');
+            toggleBtn.setAttribute('aria-checked', 'false');
+            if (technicalLabel) technicalLabel.classList.add('active');
+            if (simpleLabel) simpleLabel.classList.remove('active');
+        }
+    }
+}
+
+// Initialize toggle on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    new ELI5Toggle();
+});
+
 console.log('Portfolio website loaded successfully!');
