@@ -1121,11 +1121,13 @@ ul {
 }
 
 .footer-brand .logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-brand .logo .logo-img {
-    height: 36px !important;
+    height: 48px !important;
     width: auto !important;
     max-width: none;
 }
