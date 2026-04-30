@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordy Van Landeghem | AI & Machine Learning Consultant</title>
     <meta name="description" content="World-class AI researcher and consultant specializing in Document AI, Agentic Systems, and GenAI solutions. PhD in Computer Science, 10+ years experience.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jvlinsta.github.io/portfolio/">
+    <meta property="og:title" content="Jordy Van Landeghem | AI & Machine Learning Consultant">
+    <meta property="og:description" content="World-class AI researcher and consultant specializing in Document AI, Agentic Systems, and GenAI solutions. PhD in Computer Science, 10+ years experience.">
+    <meta property="og:image" content="https://jvlinsta.github.io/portfolio/assets/logo_whitebg.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://jvlinsta.github.io/portfolio/assets/logo_whitebg.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo"><img src="assets/logo.png" alt="JVL" class="logo-img"></a>
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="JVL" class="logo-img">
+                <span class="logo-tagline">
+                    <span class="tagline-probably">Probably</span>
+                    <span class="tagline-approximately">Approximately</span>
+                    <span class="tagline-human">Human</span>
+                </span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Research</a></li>
+                <li><a href="#talks">Talks</a></li>
                 <li><a href="#grants">Grants</a></li>
+                <!-- <li><a href="blog/">Writing</a></li> -->
                 <li><a href="#contact" class="btn btn-primary">Get in Touch</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -179,6 +196,70 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p class="section-subtitle">10+ years building production AI systems</p>
+            </div>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-period">2024 – now</div>
+                    <div class="experience-content">
+                        <span class="experience-role">Full-time</span>
+                        <h3>Senior Software Engineer, Machine Learning</h3>
+                        <p class="experience-org"><a href="https://instabase.com" target="_blank" rel="noopener">Instabase</a> — Remote</p>
+                        <ul class="experience-bullets">
+                            <li>Designed and shipped <strong>DocumentReActAgent</strong>: agentic self-correction loop over 1M+ document repositories; drove straight-through processing to 100% by resolving the hard edge cases where document automation typically hits its ceiling.</li>
+                            <li>Designed evaluation &amp; benchmarking framework (multi-provider, LLM-as-a-Judge, structured logprobs); drove Gemini model selection and contributed to enterprise deal closure.</li>
+                            <li>Authored PRD for Unified Extractor v2 architecture redesign (schema / state / prompts / engines / orchestration separation).</li>
+                            <li>Technical lead, Agent Mode team; mentored engineers across Project Accuracy, Agent Mode, and AXIS teams.</li>
+                            <li>Published two ICML 2025 technical blog posts on agentic document AI; ranked <strong>#1 in Cursor AI productivity</strong> company-wide.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-period">2017 – 2024</div>
+                    <div class="experience-content">
+                        <span class="experience-role">Full-time · 7 years</span>
+                        <h3>Lead AI Research Engineer</h3>
+                        <p class="experience-org"><a href="https://contract.fit" target="_blank" rel="noopener">Contract.fit</a> — Brussels, Belgium</p>
+                        <ul class="experience-bullets">
+                            <li>Led end-to-end <strong>Document AI engineering</strong> (NLP + CV) for insurance, finance, and legal domains across a production SaaS platform.</li>
+                            <li>Designed and shipped production-grade ML pipelines for document classification and information extraction, maintained over 7 years of growth.</li>
+                            <li>Secured <strong>4 Flemish innovation grants</strong> (VLAIO) as lead researcher; co-wrote all applications.</li>
+                            <li>Supervised <strong>11 Master's AI/CS thesis internships</strong> across KU Leuven and VUB.</li>
+                            <li>Translated academic advances (DUDE benchmark, uncertainty estimation) into scalable product features.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-period">2017</div>
+                    <div class="experience-content">
+                        <span class="experience-role">Research Intern</span>
+                        <h3>Language Modelling Research</h3>
+                        <p class="experience-org"><a href="https://research.nuance.com" target="_blank" rel="noopener">Nuance Communications</a> — Aachen, Germany</p>
+                        <ul class="experience-bullets">
+                            <li>Researched regularisation techniques for RNN language models; implemented biLSTM character-based word embeddings.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-period">2016 – 2017</div>
+                    <div class="experience-content">
+                        <span class="experience-role">Research Intern</span>
+                        <h3>NLP for Dialogue Systems</h3>
+                        <p class="experience-org"><a href="https://cloud.oracle.com" target="_blank" rel="noopener">Oracle</a> — Barcelona, Spain</p>
+                        <ul class="experience-bullets">
+                            <li>Investigated Seq2Seq neural networks for chatbot and virtual assistant technology.</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -369,6 +450,44 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p class="section-subtitle">Research and engineering that shipped</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="project-tag">Benchmark · Dataset</span>
+                    <h3>DUDE</h3>
+                    <p>Document Understanding Dataset and Evaluation — a large-scale benchmark for real-world document QA spanning extractive, multi-hop, closed-world, and visually-grounded question types. Led design, dataset construction, and the ICDAR 2023 competition. Adopted by the Document AI research community (154 citations).</p>
+                    <div class="project-links">
+                        <a href="https://arxiv.org/abs/2305.08455" target="_blank" rel="noopener">Paper</a>
+                        <a href="https://huggingface.co/datasets/jordyvl/DUDE_loader" target="_blank" rel="noopener">Dataset</a>
+                        <a href="https://github.com/Jordy-VL/DUDEeval" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-tag">Agentic AI · Production</span>
+                    <h3>DocumentReActAgent</h3>
+                    <p>Agentic self-correction loop for large-scale document repositories. As the go-to engineer for last-mile automation challenges, I drove straight-through processing to 100% by tackling the edge cases where conventional approaches hit their ceiling. Designed and shipped at Instabase; integrated into production workflows handling millions of documents.</p>
+                    <div class="project-links">
+                        <a href="#contact">Discuss</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-tag">Open Source · Research</span>
+                    <h3>DRAG</h3>
+                    <p>Document Retrieval with Agentic Grounding — trains vision-language models on successful agentic search trajectories using SFT and DPO with LoRA fine-tuning. Bridges the gap between human and agent document reasoning strategies.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/jvlinsta/DRAG" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications Section -->
     <section id="publications" class="publications">
         <div class="container">
@@ -400,9 +519,23 @@
 
             <div class="publications-list">
                 <article class="publication">
+                    <span class="publication-venue">Preprint 2026</span>
+                    <h3>Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections</h3>
+                    <p class="publication-authors"><strong>Van Landeghem, Jordy</strong>, Borchmann, L., et al.</p>
+                    <p class="publication-note">MADQA: 2,250 questions across 800 PDFs — largest human vs. agent head-to-head study in document understanding</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2603.12180" target="_blank" rel="noopener">arXiv</a>
+                    </div>
+                </article>
+                <article class="publication">
                     <span class="publication-venue">ICML 2025</span>
                     <h3>A Novel Characterization of the Population Area Under the Risk Coverage Curve (AURC) and Rates of Finite Sample Estimators</h3>
                     <p class="publication-authors">Zhou, Han, <strong>Van Landeghem, Jordy</strong>, et al.</p>
+                </article>
+                <article class="publication">
+                    <span class="publication-venue">ICDAR 2025</span>
+                    <h3>Where Layout Meets Language</h3>
+                    <p class="publication-authors">Biescas, A., Biswas, S., Lladós, J., <strong>Van Landeghem, Jordy</strong></p>
                 </article>
                 <article class="publication">
                     <span class="publication-venue">ICDAR 2024</span>
@@ -457,6 +590,66 @@
                     <p class="publication-note">Workshop on Uncertainty and Robustness in Deep Learning</p>
                     <div class="publication-links">
                         <a href="https://github.com/Jordy-VL/uncertainty-bench" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
+                <article class="publication">
+                    <span class="publication-venue">Information 2019</span>
+                    <h3>Transfer Learning for Named Entity Recognition in Financial &amp; Biomedical Documents</h3>
+                    <p class="publication-authors">Francis, S., <strong>Van Landeghem, Jordy</strong>, Moens, M.F.</p>
+                    <div class="publication-links">
+                        <a href="https://www.mdpi.com/2078-2489/10/8/248" target="_blank" rel="noopener">Paper</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks Section -->
+    <section id="talks" class="talks">
+        <div class="container">
+            <div class="section-header">
+                <h2>Talks &amp; Presentations</h2>
+                <p class="section-subtitle">Invited seminars, conference presentations, and tutorials</p>
+            </div>
+            <div class="talks-list">
+                <article class="talk">
+                    <div class="talk-venue">DAS 2026</div>
+                    <div class="talk-content">
+                        <span class="talk-type featured">Upcoming · Full-day Tutorial</span>
+                        <h3>Parse, Reflect, Retrieve, Compile: An Agent Stack for Enterprise Document AI</h3>
+                        <p class="talk-meta">Document Analysis Systems 2026 — Industry Tutorial</p>
+                    </div>
+                </article>
+                <article class="talk">
+                    <div class="talk-venue">WACV 2024</div>
+                    <div class="talk-content">
+                        <span class="talk-type">Oral Presentation</span>
+                        <h3>Beyond Document Page Classification: Design, Datasets, and Challenges</h3>
+                        <p class="talk-meta">Winter Conference on Applications of Computer Vision, January 2024</p>
+                    </div>
+                </article>
+                <article class="talk">
+                    <div class="talk-venue">ICDAR 2023</div>
+                    <div class="talk-content">
+                        <span class="talk-type">Oral Presentation</span>
+                        <h3>ICDAR 2023 Competition on Document UnderstanDing of Everything (DUDE)</h3>
+                        <p class="talk-meta">International Conference on Document Analysis and Recognition, August 2023</p>
+                    </div>
+                </article>
+                <article class="talk">
+                    <div class="talk-venue">Adobe Research</div>
+                    <div class="talk-content">
+                        <span class="talk-type">Invited Seminar</span>
+                        <h3>DUDE — What's Next?</h3>
+                        <p class="talk-meta">Document Intelligence Seminar, October 2023</p>
+                    </div>
+                </article>
+                <article class="talk">
+                    <div class="talk-venue">CVC / UAB</div>
+                    <div class="talk-content">
+                        <span class="talk-type">Invited Seminar</span>
+                        <h3>Calibration Primer for Document AI</h3>
+                        <p class="talk-meta">Computer Vision Center, Barcelona, June 2023</p>
                     </div>
                 </article>
             </div>
@@ -599,9 +792,10 @@
                 </div>
                 <div class="footer-links">
                     <a href="#about">About</a>
-                    <a href="#expertise">Expertise</a>
-                    <a href="#services">Services</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
                     <a href="#publications">Research</a>
+                    <a href="#talks">Talks</a>
                     <a href="#grants">Grants</a>
                     <a href="#contact">Contact</a>
                 </div>

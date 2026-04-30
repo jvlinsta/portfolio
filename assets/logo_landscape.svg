@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250">
+  <image href="logo.png" x="0" y="15" width="450" height="220"/>
+  <text font-family="Inter, ui-sans-serif, sans-serif" font-weight="600" letter-spacing="-0.5">
+    <tspan x="475" y="95"  font-size="46" fill="#E05C1A">Probably</tspan>
+    <tspan x="475" y="152" font-size="46" fill="#2D7A4F">Approximately</tspan>
+    <tspan x="475" y="209" font-size="46" fill="#5B21B6">Human</tspan>
+  </text>
+</svg>
