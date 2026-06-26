@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six months with the Meta Ray-Ban Scriber Optics Gen 2 | Jordy Van Landeghem</title>
+    <meta name="description" content="A CS researcher's honest take on Meta's AI smart glasses: a setup nightmare, genuinely useful AI moments, and why it's still not ready to replace your actual agent.">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Six months with the Meta Ray-Ban Scriber Optics Gen 2">
+    <meta property="og:description" content="A CS researcher's honest take on Meta's AI smart glasses: a setup nightmare, genuinely useful AI moments, and why it's still not ready to replace your actual agent.">
+    <meta property="og:image" content="https://jvlinsta.github.io/portfolio/assets/blog/rayban/lavender.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-image {
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+        .article-image figcaption {
+            font-size: 0.85rem;
+            color: var(--text-muted, #888);
+            margin-top: 0.5rem;
+            text-align: center;
+            font-style: italic;
+        }
+        .article-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .article-image-grid figure {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .article-image-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .article-image-grid figcaption {
+            font-size: 0.8rem;
+            color: var(--text-muted, #888);
+            margin-top: 0.4rem;
+            text-align: center;
+            font-style: italic;
+            padding: 0 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .article-image-grid { grid-template-columns: 1fr; }
+            .article-image-grid img { height: 260px; }
+        }
+        .verdict-box {
+            background: var(--surface-2, #f5f5f5);
+            border-left: 4px solid var(--accent, #4f46e5);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+        }
+        .verdict-box p { margin: 0 0 0.5rem; }
+        .verdict-box p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../" class="logo">
+                <img src="../assets/logo.png" alt="JVL" class="logo-img">
+                <span class="logo-tagline">
+                    <span class="tagline-probably">Probably</span>
+                    <span class="tagline-approximately">Approximately</span>
+                    <span class="tagline-human">Human</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#projects">Projects</a></li>
+                <li><a href="../#publications">Research</a></li>
+                <li><a href="../#talks">Talks</a></li>
+                <li><a href="../#grants">Grants</a></li>
+                <li><a href="../blog/" class="nav-active">Writing</a></li>
+                <li><a href="../#contact" class="btn btn-primary">Get in Touch</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="blog-article">
+        <div class="container container-narrow">
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="../blog/" class="article-back">← Writing</a>
+                    <span class="blog-date">June 2026</span>
+                    <span class="blog-tag">Review</span>
+                </div>
+                <h1 class="article-title">Six months with the Meta Ray-Ban Scriber Optics Gen 2</h1>
+            </header>
+
+            <div class="article-body">
+                <p class="article-lead">I almost sent them back on day one. Thirty-six hours, three factory resets, two Reddit threads, and one very specific Wi-Fi trick later, I was finally wearing functional AI glasses. Here's what I've learned since.</p>
+
+                <h2>The setup that nearly broke me</h2>
+
+                <p>I'm a computer science graduate. I've spent my career building AI systems, shipping production software, debugging distributed pipelines. I say this not to brag but to set the baseline: I am not the target user who struggles with technology.</p>
+
+                <p>So when I tell you the Meta Ray-Ban Scriber Optics Gen 2 setup nearly defeated me, I want you to take that seriously.</p>
+
+                <p>The issue is specific and absurd: I run a Nothing Phone, which is Android-adjacent enough to confuse the Meta View app into a connectivity loop. The glasses create their own weak Wi-Fi hotspot during pairing. The problem? My phone kept silently falling back to my home network — faster, stronger, already connected — abandoning the glasses' network mid-handshake. The app would fail. I'd try again. Same result.</p>
+
+                <p>The fix — buried in a Reddit thread after considerable searching — was to enable airplane mode first, then manually re-enable Wi-Fi. This forces your phone to connect only to the glasses' network, with no fallback option. Classic Android prioritization bug, almost certainly a Nothing Phone edge case, but still: Meta, you nearly got a return request over something a <em>Roborock robot vacuum</em> handles without incident. Even my cheapest smart home gadgets guide you through the Bluetooth-then-Wi-Fi handshake flawlessly. This was a genuine low point.</p>
+
+                <figure class="article-image">
+                    <img src="../assets/blog/rayban/setup.png" alt="Desk setup with Ray-Ban glasses unboxing alongside work monitors">
+                    <figcaption>Day one: the unboxing sitting next to my actual job. At this point, still blissfully unaware of what the next few hours would hold.</figcaption>
+                </figure>
+
+                <p>I checked the forums and found plenty of others who'd hit the same wall. That's what really stings — this isn't an exotic edge case, it's a known failure mode that Meta hasn't fixed. For a €600 device, that's not acceptable. I came within minutes of boxing them back up.</p>
+
+                <h2>Once they're working, the camera is genuinely great</h2>
+
+                <p>The Scriber Optics frame is the prescription variant — lighter than the standard frames, transition lenses, and noticeably less bulky. Worth the premium if you wear glasses daily. One practical note: go with the low nose pads if you're active. The standard pads slid off my face when running or sweating. Small thing, big difference.</p>
+
+                <p>The camera quality surprised me. There's something qualitatively different about first-person footage — it captures the actual field of view, the angle you're looking at the world, not the staged shot you'd compose holding up a phone. And then there's the hyperlapse function, which I honestly didn't expect to use but kept reaching for. There's something funny and oddly satisfying about having a smoker full of meatloaf and chicken captured as a crisp overhead timelapse purely because I happened to be leaning over it.</p>
+
+                <figure class="article-image">
+                    <img src="../assets/blog/rayban/bbq.jpeg" alt="Smoker BBQ with meatloaf and chicken, shot from first-person perspective while wearing the glasses">
+                    <figcaption>Sunday afternoon. The camera just lives where your eyes are — no staging, no deciding what to capture. I didn't notice I'd taken this until later.</figcaption>
+                </figure>
+
+                <h2>Hey Meta, look at this plant</h2>
+
+                <p>This is where the device genuinely surprised me. I was at a plant shop, looking for something for my home office. I tend to kill plants through neglect — I forget to water them, I misjudge their light requirements, I pick things that need more care than I'm willing to give. So I just asked: <em>"Hey Meta, can you look at this plant? Would it work indoors? Does it need a lot of water?"</em></p>
+
+                <p>It told me about the plant's care requirements, whether it was suitable for a bedroom versus a home office, and flagged which ones would survive someone who forgets to water. That's not a use case I'd read about in any review. It emerged naturally from just... having a knowledgeable voice in your ear while you're standing in a shop.</p>
+
+                <figure class="article-image">
+                    <img src="../assets/blog/rayban/lavender.jpeg" alt="Hand holding a lavender plant tag at the nursery, surrounded by flowering lavender">
+                    <figcaption>The lavender that Meta recommended. I would not have bought this — lavender always reads as outdoor-only to me. It's been thriving in my office for months.</figcaption>
+                </figure>
+
+                <p>I went home with a lavender plant. It's still alive and flowering on my desk as I write this — something I genuinely attribute to getting the right advice in the right moment, hands-free, while I was standing in front of the actual plant. That moment crystallized why the always-on, ambient form factor matters. The information arrived precisely when it was relevant, without any friction.</p>
+
+                <h2>The conversation mode is the best and most awkward feature</h2>
+
+                <p>You don't have to say "Hey Meta" between turns. Once you've started a conversation, you can keep going — follow-up questions, clarifications, tangents — without re-triggering the wake word. For a researcher who thinks in dialogue, this is the right design decision. It starts to feel less like issuing commands to a device and more like thinking out loud with someone who can respond.</p>
+
+                <p>The awkward part: you never quite know when it's stopped listening. After five or six turns, the session quietly ends. You might keep talking — expecting a response — and realize mid-sentence that you're just talking to yourself in public. There's no graceful way out of that. A gentle audio cue that the conversation has closed would solve this entirely. Right now it's just slightly embarrassing when it happens.</p>
+
+                <figure class="article-image">
+                    <img src="../assets/blog/rayban/daughter.jpeg" alt="Young girl in a blue dress with arms spread wide in a park, shot from the glasses' elevated first-person perspective">
+                    <figcaption>You can tell whose perspective this is from. The height differential gives it away.</figcaption>
+                </figure>
+
+                <h2>The AI questions I can't fully answer yet</h2>
+
+                <p>I'm curious about what's running underneath. The visual recognition is good — plant identification, object recognition, contextual scene understanding. My guess is there's SAM-style segmentation involved at some level; the spatial awareness is too clean for pure classification. I'd love to read the technical paper if one ever surfaces.</p>
+
+                <p>On the audio side: I had a conversation with someone from ElevenLabs and came away fairly convinced the text-to-speech and STT pipeline is ElevenLabs-powered, or at least ElevenLabs-inspired. There was a moment that stuck with me — I asked a question about My Hero Academia and it briefly adopted the protagonist's voice in the response. Not a full impression, just a touch of it. That kind of contextual personality adjustment isn't something you get from Google Home or Alexa without explicit programming. It felt like a very deliberate design choice, and it worked.</p>
+
+        <p>I also did a bit of poking around on the LLM side. When I asked what it uses under the hood, it told me: <em>Llama 4</em>. When I pushed back — "ew, why Llama 4, don't you have something better?" — it got mildly defensive and explained that Llama 4 is actually a top-notch multimodal model available in Scout and Maverick variants. Which is technically accurate and also exactly what you'd expect a system prompted to be enthusiastic about its own stack to say. The interesting part is that Llama 4 is not exactly cutting-edge at this point — it's a model that has been thoroughly lapped by the current frontier. For a device launched in 2025, running a model that already felt dated by mid-2026 is a real limitation. Meta is vertically integrated enough to run their own stack on their own hardware, which is the right long-term bet — but they need to keep the model current if they want the AI experience to stay competitive.</p>
+
+                <h2>The missing piece: it's still not an agent</h2>
+
+                <p>The Gmail integration exists. I set it up. It doesn't really work in any meaningful way. You can't ask about your emails, reference your calendar, or have Meta pull context from your actual life. For something positioned as an AI companion, this is a significant gap. Right now it knows the world but it doesn't know <em>you</em> — and that distinction matters more than almost anything else for daily utility.</p>
+
+                <p>What I want is a device that can say "you have a call with a client in 20 minutes, you'd mentioned wanting to discuss X" while I'm making coffee. That would be a genuinely transformative product. What I have is a very smart, very capable chatbot in a frame. The difference is enormous.</p>
+
+                <div class="verdict-box">
+                    <p><strong>Who should buy this:</strong> If you don't already have quality earbuds and decent sunglasses, the value proposition is real — you get crisp audio, an AI assistant, corrective lenses if you need them, and a camera, all in one device you'd be wearing anyway.</p>
+                    <p><strong>Who should wait:</strong> If you already have two of those three things, hold off. The AI experience is ahead of most consumer products I've tried, but it's not yet seamless enough to justify the upgrade unless you're genuinely curious about where this category is going.</p>
+                    <p><strong>The unlock:</strong> When Meta gives it real access to your personal data — email, calendar, messages — in a way that actually works, this becomes a different product entirely. Right now it's an excellent companion. Then it would be an actual agent. That gap is the whole ballgame.</p>
+                </div>
+
+                <p>I'm keeping them. The plant is thriving. The setup frustration has long faded. But Meta: please fix the Android pairing. And ship the Gmail integration that actually works. You're so close.</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="../#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="../blog/" class="btn btn-secondary">← Back to Writing</a>
+            </footer>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo"><img src="../assets/logo.png" alt="JVL" class="logo-img"></span>
+                    <p>AI & Machine Learning Consultant</p>
+                    <p class="footer-location">Belgium (EU)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../#about">About</a>
+                    <a href="../#experience">Experience</a>
+                    <a href="../#projects">Projects</a>
+                    <a href="../#publications">Research</a>
+                    <a href="../#contact">Contact</a>
+                    <a href="../blog/">Writing</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jordy Van Landeghem. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
