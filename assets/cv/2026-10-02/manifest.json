@@ -1,0 +1,22 @@
+{
+  "business_JordyVanLandeghem.pdf": {
+    "source": "cv_business.pdf",
+    "sha256": "80ce3fdb83e1bc1c91af09ed865ecf130d1116ea6e79aa3df41b4a6e8b764256"
+  },
+  "research_JordyVanLandeghem.pdf": {
+    "source": "cv.pdf",
+    "sha256": "66dd71d0e5205cac92b1c380c39fa8fc88afff5e8d75dca9c7bb79a8452e7f2c"
+  },
+  "academic_JordyVanLandeghem.pdf": {
+    "source": "cv_academic.pdf",
+    "sha256": "928b967dc04a6d8928082b9d5c4ced0586c2c82907bdd8bed06bb50bd1a6ce82"
+  },
+  "fde_JordyVanLandeghem.pdf": {
+    "source": "cv_fde.pdf",
+    "sha256": "ad1cec7af9217448afd1015d6f7765134763f79875d4f86d4724c414967e9aec"
+  },
+  "ats_JordyVanLandeghem.pdf": {
+    "source": "cv_ats.pdf",
+    "sha256": "072860b50b566470a8246c963f620635c7666d2a06d14d6911be90cb878049c3"
+  }
+}
